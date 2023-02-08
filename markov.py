@@ -82,7 +82,7 @@ for i in range(number_of_sentences):
 #! EXPLICACION
 
 # Esta sección del código abre un archivo de texto llamado "frases/frases_informatica.txt" en modo 
-# lectura (el "r" significa lectura). Luego, todo el texto del archivo se almacena en la variable "text".
+# lectura (el "r" significa lectura). Luego, las frases del archivo se almacenan en la variable "text".
 
 # Después, se llama a la función "create_markov_chain" y se pasa como argumento la variable "text", 
 # para crear una cadena de Markov. El resultado se almacena en la variable "markov_chain".
