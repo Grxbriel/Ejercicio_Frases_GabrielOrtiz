@@ -1,12 +1,14 @@
 
 import random
+import re
 
 ##Funciones
 
 def create_markov_chain(text):
+    text = re.sub('[^\w\s]', '', text)
     words = text.split()
     markov_chain = {}
-    for i in range(len(words) - 1):
+    for i in range(len(words)-1):
         current_word = words[i]
         next_word = words[i + 1]
         if current_word in markov_chain:
@@ -22,7 +24,8 @@ def create_markov_chain(text):
 
 # Pasos que realiza la función:
 
-# Divide el texto en palabras individuales, utilizando text.split().
+# Elimina los signos de puntuación de todas las frases, utilizando la funcion re.sub() de la libreria re
+# Divide las frases en palabras individuales, utilizando text.split().
 # Crea un diccionario vacío llamado markov_chain.
 # Itera a través de cada palabra en el texto.
 # Para cada palabra, se guarda la palabra actual en la variable current_word y la siguiente palabra en next_word.
@@ -67,7 +70,7 @@ def generate_text(markov_chain, length):
 
 file = open("frases/frases_informatica.txt", "r") 
 
-text = file.read()
+text = "".join (file.readlines())
 markov_chain = create_markov_chain(text)
 number_of_sentences = int(input("Dime el numero de frases que quieres: "))
 

@@ -8,6 +8,8 @@ La función `create_markov_chain` es responsable de crear la cadena de Markov.
 
 Pasos que realiza la función:
 
+* Elimina los signos de puntuación de todas las frases, utilizando la funcion `re.sub()` de la libreria re
+
 * Divide el texto en palabras individuales, utilizando `text.split()`.
 
 * Crea un diccionario vacío llamado `markov_chain`.
