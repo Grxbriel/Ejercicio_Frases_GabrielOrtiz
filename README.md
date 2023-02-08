@@ -45,7 +45,11 @@ Finalmente, la función devuelve la frase generada como una cadena de texto.
 
 ---
 
-Esta sección del código abre un archivo de texto llamado `"frases/frases_informatica.txt"` en modo lectura (el "r" significa lectura). Luego, todo el texto del archivo se almacena en la variable `"text"`.
+Esta sección del código abre un archivo de texto llamado `"frases/frases_informatica.txt"` en modo lectura (el "r" significa lectura). 
+
+El método readlines() lee todas las líneas del archivo y las devuelve como una lista de cadenas. La función join() toma una lista de cadenas y las une en una única cadena, separándolas con el separador que se le pasa como argumento. En este caso, el separador es una cadena vacía '', por lo que las líneas se unen sin separación alguna.
+
+Luego, todo el texto del archivo se almacena en la variable `"text"`.
 
 Después, se llama a la función `"create_markov_chain"` y se pasa como argumento la variable `"text"`,  para crear una cadena de Markov. El resultado se almacena en la variable `"markov_chain"`.
 

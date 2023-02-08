@@ -82,13 +82,18 @@ for i in range(number_of_sentences):
 #! EXPLICACION
 
 # Esta sección del código abre un archivo de texto llamado "frases/frases_informatica.txt" en modo 
-# lectura (el "r" significa lectura). Luego, las frases del archivo se almacenan en la variable "text".
+# lectura (el "r" significa lectura). 
+
+# El método readlines() lee todas las líneas del archivo y las devuelve como una lista de cadenas. La función join() toma una lista de cadenas y las une en una única cadena, separándolas con el separador que se le pasa como argumento. 
+# En este caso, el separador es una cadena vacía '', por lo que las líneas se unen sin separación alguna.
+# Luego, las frases del archivo se almacenan en la variable "text".
 
 # Después, se llama a la función "create_markov_chain" y se pasa como argumento la variable "text", 
 # para crear una cadena de Markov. El resultado se almacena en la variable "markov_chain".
 
 # Luego, se pide al usuario que introduzca un número para indicar el número de frases que desea generar, 
 # y se almacena en la variable "number_of_sentences".
+
 
 # A continuación, se utiliza un bucle for que se ejecuta "number_of_sentences" veces. En cada iteración, 
 # se llama a la función "generate_text" y se pasa como argumentos "markov_chain" y 10 (que representa el número máximo de palabras que se deben generar en cada frase). La frase generada se almacena en la variable "generated_text". Finalmente, se imprime "generated_text".
