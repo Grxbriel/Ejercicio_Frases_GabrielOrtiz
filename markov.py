@@ -94,7 +94,6 @@ for i in range(number_of_sentences):
 # Luego, se pide al usuario que introduzca un número para indicar el número de frases que desea generar, 
 # y se almacena en la variable "number_of_sentences".
 
-
 # A continuación, se utiliza un bucle for que se ejecuta "number_of_sentences" veces. En cada iteración, 
 # se llama a la función "generate_text" y se pasa como argumentos "markov_chain" y 10 (que representa el número máximo de palabras que se deben generar en cada frase). La frase generada se almacena en la variable "generated_text". Finalmente, se imprime "generated_text".
 
