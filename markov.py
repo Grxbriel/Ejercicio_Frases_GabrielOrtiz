@@ -4,7 +4,7 @@ import re
 
 ##Funciones
 
-def create_markov_chain(text):
+def create_chain(text):
     text = re.sub('[^\w\s]', '', text)
     words = text.split()
     markov_chain = {}
@@ -71,12 +71,14 @@ def generate_text(markov_chain, length):
 file = open("frases/frases_informatica.txt", "r") 
 
 text = "".join (file.readlines())
-markov_chain = create_markov_chain(text)
+markov_chain = create_chain(text)
 number_of_sentences = int(input("Dime el numero de frases que quieres: "))
 
 for i in range(number_of_sentences):
     generated_text = generate_text(markov_chain, 10)
     print(generated_text)
+    
+print(markov_chain)
 
 
 #! EXPLICACION
@@ -88,7 +90,7 @@ for i in range(number_of_sentences):
 # En este caso, el separador es una cadena vacía '', por lo que las líneas se unen sin separación alguna.
 # Luego, las frases del archivo se almacenan en la variable "text".
 
-# Después, se llama a la función "create_markov_chain" y se pasa como argumento la variable "text", 
+# Después, se llama a la función "create_chain" y se pasa como argumento la variable "text", 
 # para crear una cadena de Markov. El resultado se almacena en la variable "markov_chain".
 
 # Luego, se pide al usuario que introduzca un número para indicar el número de frases que desea generar, 

@@ -1,10 +1,10 @@
 # Ejercicio_Frases_GabrielOrtiz
 
 
-### Explicación Función `create_markov_chain`
+### Explicación Función `create_chain`
 ---
 
-La función `create_markov_chain` es responsable de crear la cadena de Markov.
+La función `create_chain` es responsable de crear la cadena de Markov.
 
 Pasos que realiza la función:
 
@@ -51,7 +51,7 @@ El método readlines() lee todas las líneas del archivo y las devuelve como una
 
 Luego, todo el texto del archivo se almacena en la variable `"text"`.
 
-Después, se llama a la función `"create_markov_chain"` y se pasa como argumento la variable `"text"`,  para crear una cadena de Markov. El resultado se almacena en la variable `"markov_chain"`.
+Después, se llama a la función `"create_chain"` y se pasa como argumento la variable `"text"`,  para crear una cadena de Markov. El resultado se almacena en la variable `"markov_chain"`.
 
 Luego, se pide al usuario que introduzca un número para indicar el número de frases que desea generar, y se almacena en la variable `"number_of_sentences"`.
 
