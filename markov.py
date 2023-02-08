@@ -18,8 +18,7 @@ def create_markov_chain(text):
 
 #! EXPLICACION
 
-# La función create_markov_chain es responsable de crear la cadena de Markov. La cadena de Markov es un modelo de 
-# probabilidad que permite predecir la próxima palabra en un texto, basándose en las palabras previas.
+# La función create_markov_chain es responsable de crear la cadena de Markov.
 
 # Pasos que realiza la función:
 
@@ -30,10 +29,8 @@ def create_markov_chain(text):
 # Si current_word ya existe en el diccionario markov_chain, se agrega next_word a la lista de palabras siguientes 
 # asociadas con current_word.
 # Si current_word no existe en el diccionario, se crea una nueva entrada para él con una lista que solo contiene next_word.
-# Repite los pasos 4 a 6 para cada palabra en el texto.
 # Devuelve el diccionario markov_chain al final del bucle.
-# El diccionario markov_chain es una representación de la estructura del texto en un formato que permite predecir 
-# la próxima palabra basándose en la palabra actual.
+
 
 
 def generate_text(markov_chain, length):
